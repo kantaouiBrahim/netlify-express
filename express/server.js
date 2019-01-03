@@ -1,8 +1,6 @@
 'use strict';
 const express = require('express');
 const serverless = require('serverless-http');
-
-const express = require('express')
 const app = express()
 const server = app.listen(4422, '0.0.0.0', err => console.log(err|| 'Listening on port 4422...'))
 const io = require('socket.io')(server)
