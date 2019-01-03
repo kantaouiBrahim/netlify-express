@@ -7,11 +7,6 @@ const server = app.listen(3000, () => console.log('Local app listening on port 3
 
 const io = require('socket.io')(server)
 
-const multipart = require('connect-multiparty');
-const multipartMiddleware = multipart({ uploadDir: './tmp' });
-
-var uploader = require('./express/uploader-node.js')('tmp')
-
 const Datastore = require('nedb-promises')
 
 const fs = require('fs')
@@ -21,7 +16,6 @@ db.onlines      = Datastore.create('onlines.exe')
 db.messagesData = Datastore.create('messagesData.exe')
 db.files        = Datastore.create('files.exe')
 
-app.use(express.static('dist'))
 // Connected People
 const onlines = new Set()
 
