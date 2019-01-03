@@ -7,6 +7,8 @@ const app = express()
 const server = app.listen(4422, '0.0.0.0', err => console.log(err|| 'Listening on port 4422...'))
 const io = require('socket.io')(server)
 
+app.get('/', (req,res)=> res.send('ghghg'))
+
 const multipart = require('connect-multiparty');
 const multipartMiddleware = multipart({ uploadDir: './tmp' });
 
