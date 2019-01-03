@@ -143,6 +143,7 @@ io.on('connection', socket =>{
 
 
 
+const bodyParser = require('body-parser');
 
 
 const router = express.Router();
