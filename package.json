@@ -27,6 +27,6 @@
     "express": "^4.16.3",
     "netlify-lambda": "^0.4.0",
     "serverless-http": "^1.6.0",
-    "socket.io:"*"
+    "socket.io:"^2.3.0"
   }
 }
